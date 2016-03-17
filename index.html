@@ -3,19 +3,139 @@
 <head>
 	<title>MMS</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <script src="js/jquery-sortable-min.js"></script>
 	<script src="//d3js.org/d3.v3.min.js"></script>
 	<script src="js/drawer.js"></script>
+    <script src="js/sorts.js"></script>
 </head>
 <body>
 	<div class="data-div div-1"></div>
 	<div class="data-div div-2"></div>
 	<div class="data-div div-3"></div>
 	<div class="data-div div-4"></div>
+    <div class="legend-1">
+        <form id="sort-it">
+  <ol>
+    <li id = 'first'>Impact on my neighbors
+      <label for="custom-number-1">New order:</label>
+      <input id="custom-number-1" name="custom-number-1" type="number" min="1">
+    </li>
+    <li id = 'second'>Investment
+      <label for="custom-number-2">New order:</label>
+      <input id="custom-number-2" name="custom-number-2" type="number" min="1">
+    </li>
+    <li id = 'third'>Groundwater Infiltration
+      <label for="custom-number-3">New order:</label>
+      <input id="custom-number-3" name="custom-number-3" type="number" min="1">
+    </li>
+    <li id = 'fourth'>Efficiency of Intervention &#40&#36&#47Gallon&#41
+      <label for="custom-number-4">New order:</label>
+      <input id="custom-number-4" name="custom-number-4" type="number" min="1">
+    </li>
+    <li id = 'fifth'>Damage Reduction
+      <label for="custom-number-5">New order:</label>
+      <input id="custom-number-5" name="custom-number-5" type="number" min="1">
+    </li>
+    <li id = 'sixth'>Capacity Used
+      <label for="custom-number-6">New order:</label>
+      <input id="custom-number-6" name="custom-number-6" type="number" min="1">
+    </li>
+      <li id = 'seventh'>Water Flow Path
+      <label for="custom-number-7">New order:</label>
+      <input id="custom-number-7" name="custom-number-7" type="number" min="1">
+    </li>
+      <li id = 'eighth'>Maximum Flooded Area
+      <label for="custom-number-8">New order:</label>
+      <input id="custom-number-8" name="custom-number-8" type="number" min="1">
+    </li>
+  </ol>
+  <input style="display:none" type="submit" id="manual-sort" name="manual-sort" value="Update">
+</form>
+    </div> 
+   <div class="legend-2">
+        <form id="sort-it">
+          <ol>
+            
+            
+            <li class = 'third'>Groundwater Infiltration
+            </li>
+              <li class = 'seventh'>Water Flow Path
+            </li>
+              <li class = 'eighth'>Maximum Flooded Area
+            </li>
+              <li class = 'second'>Investment
+            </li>
+              <li class = 'sixth'>Capacity Used
+            </li>
+              <li class = 'fourth'>Efficiency of Intervention &#40&#36&#47Gallon&#41
+            </li>
+            <li class = 'fifth'>Damage Reduction
+            </li>
+            <li class = 'first'>Impact on my neighbors
+            </li>
+          </ol>
+          <input style="display:none" type="submit" id="manual-sort" name="manual-sort" value="Update">
+        </form>
+    </div> 
+
+<div class="legend-3">
+        <form id="sort-it">
+          <ol>
+            <li class = 'fifth'>Damage Reduction
+            </li>
+            <li class = 'third'>Groundwater Infiltration
+            </li>
+            <li class = 'first'>Impact on my neighbors
+            </li>
+            <li class = 'sixth'>Capacity Used
+            </li>
+            <li class = 'second'>Investment
+            </li>
+            <li class = 'fourth'>Efficiency of Intervention &#40&#36&#47Gallon&#41
+            </li>
+            <li class = 'eighth'>Maximum Flooded Area
+            </li>
+            <li class = 'seventh'>Water Flow Path
+            </li>
+          </ol>
+          <input style="display:none" type="submit" id="manual-sort" name="manual-sort" value="Update">
+        </form>
+    </div> 
+
+<div class="legend-4">
+        <form id="sort-it">
+          <ol>
+            
+            <li class = 'seventh'>Water Flow Path
+            </li>
+              <li class = 'eighth'>Maximum Flooded Area
+            </li>
+              <li class = 'fourth'>Efficiency of Intervention &#40&#36&#47Gallon&#41
+            </li>
+              <li class = 'second'>Investment
+            </li>
+              <li class = 'sixth'>Capacity Used
+            </li>
+              <li class = 'first'>Impact on my neighbors
+            </li>
+            <li class = 'third'>Groundwater Infiltration
+            </li>
+            <li class = 'fifth'>Damage Reduction
+
+            </li>
+            
+          </ol>
+          <input style="display:none" type="submit" id="manual-sort" name="manual-sort" value="Update">
+        </form>
+    </div> 
+
+
     <script>
 	drawgraph(".div-1",[8,7,6,5,4,3,2,1]);
-	drawgraph(".div-2",[8,7,6,5,4,3,2,1]);
-	drawgraph(".div-3",[4,7,6,5,8,3,2,1]);
-	drawgraph(".div-4",[1,7,6,5,4,3,2,8]);
+	drawgraph(".div-2",[1,5,8,3,2,4,7,6]);
+	drawgraph(".div-3",[6,4,7,3,8,5,1,2]);
+	drawgraph(".div-4",[3,6,8,2,4,1,7,5]);
     </script>    
 	<!-- <div class="data-div"></div>
 	<div class="data-div"></div> -->

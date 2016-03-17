@@ -48,7 +48,8 @@ l[4]=9-$("#custom-number-5").val();
 l[5]=9-$("#custom-number-6").val();
 l[6]=9-$("#custom-number-7").val();
 l[7]=9-$("#custom-number-8").val();
-//call sumanth function
+d3.select(".div-1").selectAll('*').remove();
+drawgraph(".div-1",l);
 }
 	
 function updateAllNumbers(currObj, targets){
@@ -101,7 +102,8 @@ l[4]=9-$("#custom-number-5").val();
 l[5]=9-$("#custom-number-6").val();
 l[6]=9-$("#custom-number-7").val();
 l[7]=9-$("#custom-number-8").val();
-//call sumanth function
+d3.select(".div-1").selectAll('*').remove();
+drawgraph(".div-1",l);
 }
 
     
