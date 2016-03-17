@@ -5,10 +5,14 @@ body{
 	position: relative;
 	margin: 0;
 }
+.axis--x path {
+  display: none;
+}
+
 .data-div{
 	height: 480px;
 	width: 600px;
-	position: absolute;	
+	position: absolute;
 }
 .div-1{
 	top: 0;
