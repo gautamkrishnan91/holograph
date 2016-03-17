@@ -9,6 +9,11 @@ body{
   display: none;
 }
 
+.axis text {
+  font: 10px sans-serif;
+  fill: white;    
+}
+
 .data-div{
 	height: 480px;
 	width: 600px;

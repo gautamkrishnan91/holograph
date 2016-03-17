@@ -13,7 +13,7 @@ var x = d3.scale.ordinal()
 var y = d3.scale.linear()
     .rangeRound([height, 0]);
 
-var z = d3.scale.category20b();
+var z = d3.scale.category20();
 
 var xAxis = d3.svg.axis()
     .scale(x)
@@ -54,7 +54,7 @@ d3.csv("js/ecodata.csv", type, function(error, data) {
       .attr("x", function(d) { return x(d.x); })
       .attr("y", function(d) { return y(d.y + d.y0); })
       .attr("height", function(d) { return y(d.y0) - y(d.y + d.y0); })
-      .attr("width", x.rangeBand() - 1);
+      .attr("width", (x.rangeBand() - 1)*0.8);
 
   svg.append("g")
       .attr("class", "axis axis--x")
