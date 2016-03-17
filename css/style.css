@@ -46,3 +46,108 @@ body{
 	transform: rotate(-270deg);
 	right: 430px;
 }
+
+body { font-family: sans-serif; }
+
+#sort-it input { font-size: 1em;} /* prevent zoom in mobile */
+
+#sort-it ol {
+  /* list style is faked with number inputs */
+  list-style: none;
+  padding: 0;
+}
+
+#sort-it li {
+  position: relative;
+  min-height: 1em;
+  cursor: move;
+  padding: .5em .5em .5em 2.5em;
+  border: 1px solid #ccc;
+  margin: .25em 0;
+  border-radius: .25em;
+  max-width: 16em;
+  color: white
+}
+    
+#sort-it li#first{
+background: #1f77b4;   
+}
+
+#sort-it li#second{
+background: #aec7e8;
+color: black
+}
+    
+#sort-it li#third{
+background: #ff7f0e;
+}
+    
+#sort-it li#fourth{
+background: #ffbb78;
+color: black
+}
+    
+#sort-it li#fifth{
+background: #2ca02c;        
+}
+ 
+#sort-it li#sixth{
+background: #98df8a;
+color: black
+}
+    
+#sort-it li#seventh{
+background: #d62728;
+}
+    
+#sort-it li#eighth{
+background: #ff9896;
+color: black
+}
+
+#sort-it li input {
+  /* Move these to visually fake the ol numbers */
+  position: absolute;
+  width: 1.75em;
+  left: .25em;
+  top: .4em;
+  border: 0;
+  text-align: right;
+  background: transparent;
+  color: white
+}
+
+#sort-it li input#custom-number-2{
+  color: black
+}
+
+#sort-it li input#custom-number-4{
+  color: black
+}    
+
+#sort-it li input#custom-number-6{
+  color: black
+}
+
+#sort-it li input#custom-number-8{
+  color: black
+}
+        
+#sort-it li label {
+  /* visually hidden offscreen so it still benefits screen readers */
+  position: absolute;
+  left: -9999px;
+}
+
+/* sortable plugin styles when dragged */
+
+#sort-it .dragged {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2000;
+}
+
+#sort-it li.placeholder {
+  position: relative;
+  background: #eee;
+}
