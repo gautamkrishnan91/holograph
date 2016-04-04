@@ -4,6 +4,7 @@ body{
 	width: 2560px;
 	position: relative;
 	margin: 0;
+  overflow: hidden;
 }
 .axis--x path {
   display: none;
@@ -22,56 +23,57 @@ body{
 .div-1{
 	top: 0;
 	left: 50%;
-	margin-left: -300px;
+	margin-left: -340px;
+  transform: scale(-1,1);
 }
 .div-2{
 	top: 50%;
-	margin-top: -240px;
-	transform: rotate(-90deg);
+	margin-top: -200px;
+	transform: rotate(-90deg) scale(-1,1);
 	left: 430px;
 }
 .div-3{
 	bottom: 0;
 	left: 50%;
-	margin-left: -300px;
-	transform: rotate(180deg);
+	margin-left: -260px;
+	transform: rotate(180deg) scale(-1,1);
 }
 .div-4{
 	top: 50%;
-	margin-top: -240px;
-	transform: rotate(-270deg);
-	right: 430px;
+	margin-top: -280px;
+	transform: rotate(-270deg) scale(-1,1);
+	right: 380px;
 }
 .legend-1{
     float: left;
     position: absolute;
     right: 50%;
-    margin-right: -550px;
-    transform: scale(0.8);
+    margin-right: -570px;
+    transform: scale(0.8) scale(-1,1);
     top: -30px;
 }
 .legend-2{
     float: left;
     position: absolute;
     margin-top: 211px;
-    margin-left: -790px;
-    transform: scale(0.8) rotate(-90deg);
+    margin-left: -880px;
+    transform: scale(0.8) rotate(-90deg) scale(-1,1);
     left: 50%;
 }
 .legend-3{
     float: left;
     position: absolute;
     right: 50%;
-    margin-right: 250px;
-    transform: scale(0.8) rotate(180deg);
+    margin-right: 280px;
+    transform: scale(0.8) rotate(180deg) scale(-1,1);
     bottom: -30px;
 }
 .legend-4{
     float: left;
     position: absolute;
     margin-top: 1011px;
-    margin-right: -790px;
-    transform: scale(0.8) rotate(-270deg);
+    margin-right: -850px;
+    transform: scale(0.8) rotate(-270deg) scale(-1,1);
     right: 50%;
 }
 
@@ -87,6 +89,23 @@ body { font-family: sans-serif; }
 }
 
 #sort-it li {
+  position: relative;
+  min-height: 1em;
+  cursor: move;
+  padding: .5em .5em .5em 2.5em;
+  border: 1px solid #ccc;
+  margin: .25em 0;
+  border-radius: .25em;
+  max-width: 16em;
+  color: white
+}
+.sort-it ol {
+  /* list style is faked with number inputs */
+  list-style: none;
+  padding: 0;
+}
+
+.sort-it li {
   position: relative;
   min-height: 1em;
   cursor: move;
