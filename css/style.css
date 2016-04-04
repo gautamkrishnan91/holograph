@@ -12,7 +12,7 @@ body{
 
 .axis text {
   font: 10px sans-serif;
-  fill: white;    
+  fill: white;
 }
 
 .data-div{
@@ -116,73 +116,73 @@ body { font-family: sans-serif; }
   max-width: 16em;
   color: white
 }
-    
+
 #sort-it li#first{
-background: #1f77b4;   
+background: #1f77b4;
 }
 
 #sort-it li#second{
 background: #aec7e8;
 color: black
 }
-    
+
 #sort-it li#third{
 background: #ff7f0e;
 }
-    
+
 #sort-it li#fourth{
 background: #ffbb78;
 color: black
 }
-    
+
 #sort-it li#fifth{
-background: #2ca02c;        
+background: #2ca02c;
 }
- 
+
 #sort-it li#sixth{
 background: #98df8a;
 color: black
 }
-    
+
 #sort-it li#seventh{
 background: #d62728;
 }
-    
+
 #sort-it li#eighth{
 background: #ff9896;
 color: black
 }
 .first{
-background: #1f77b4;   
+background: #1f77b4;
 }
 
 .second{
 background: #aec7e8;
 color: black
 }
-    
+
 .third{
 background: #ff7f0e;
 }
-    
+
 .fourth{
 background: #ffbb78;
 color: black
 }
-    
+
 .fifth{
-background: #2ca02c;        
+background: #2ca02c;
 }
- 
+
 .sixth{
 background: #98df8a;
 color: black
 }
-    
+
 .seventh{
 background: #d62728;
 }
-    
+
 .eighth{
 background: #ff9896;
 color: black
@@ -206,7 +206,7 @@ color: black
 
 #sort-it li input#custom-number-4{
   color: black
-}    
+}
 
 #sort-it li input#custom-number-6{
   color: black
@@ -215,7 +215,7 @@ color: black
 #sort-it li input#custom-number-8{
   color: black
 }
-        
+
 #sort-it li label {
   /* visually hidden offscreen so it still benefits screen readers */
   position: absolute;
@@ -233,4 +233,8 @@ color: black
 #sort-it li.placeholder {
   position: relative;
   background: #eee;
+}
+
+.passive{
+	fill-opacity: 0.4;
 }

@@ -52,6 +52,7 @@ d3.csv("js/ecodata.csv", type, function(error, data) {
       .data(function(d) { return d; })
     .enter().append("rect")
       .attr("x", function(d) { return x(d.x); })
+      .attr("class",function(d) { return d.x; })
       .attr("y", function(d) { return y(d.y + d.y0); })
       .attr("height", function(d) { return y(d.y0) - y(d.y + d.y0); })
       .attr("width", (x.rangeBand() - 1)*0.8);
