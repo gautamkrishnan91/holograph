@@ -4,7 +4,6 @@ body{
 	width: 2560px;
 	position: relative;
 	margin: 0;
-  overflow: hidden;
 }
 .axis--x path {
   display: none;

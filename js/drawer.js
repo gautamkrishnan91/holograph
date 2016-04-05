@@ -61,8 +61,25 @@ d3.csv("js/ecodata.csv", type, function(error, data) {
       .attr("class", "axis axis--x")
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
-});
 
+  svg.append("text")
+        .attr("x", (width / 2))
+        .attr("y", 0 - (margin.top / 2))
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .style("fill", "white")
+        .text(function(){
+            if(divcl==".div-2")
+              return "Pedestrian";
+            if(divcl==".div-3")
+              return "Politician";
+            if(divcl==".div-4")
+             return "Quality Analyst";
+            else {
+              return "";
+            }
+        });
+  });
 function type(d) {
   d.impactNeighbors=+d.impactNeighbors*pri[0];
   d.investment=+d.investment*pri[1];
