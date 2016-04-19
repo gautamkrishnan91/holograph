@@ -13,7 +13,20 @@ var x = d3.scale.ordinal()
 var y = d3.scale.linear()
     .rangeRound([height, 0]);
 
-var z = d3.scale.category20();
+if(divcl==".div-2")
+  var z = d3.scale.linear().range(['#e5f5f9','#99d8c9','#2ca25f']);
+else if(divcl==".div-3")
+  var z = d3.scale.linear().range(['#fff7bc','#fec44f','#d95f0e']);
+else if(divcl==".div-4")
+  var z = d3.scale.linear().range(['#ece7f2','#a6bddb','#2b8cbe']);
+else {
+  var z = d3.scale.category20();
+}
+
+// else {
+//   return "";
+// }
+// }
 
 var xAxis = d3.svg.axis()
     .scale(x)
@@ -64,7 +77,7 @@ d3.csv("js/ecodata.csv", type, function(error, data) {
 
   svg.append("text")
         .attr("x", (width / 2))
-        .attr("y", 0 - (margin.top / 2))
+        .attr("y", 0 - (margin.top / 3))
         .attr("text-anchor", "middle")
         .style("font-size", "16px")
         .style("fill", "white")
