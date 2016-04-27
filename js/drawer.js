@@ -14,11 +14,11 @@ var y = d3.scale.linear()
     .rangeRound([height, 0]);
 
 if(divcl==".div-2")
-  var z = d3.scale.linear().range(['#e5f5f9','#99d8c9','#2ca25f']);
+  var z = function(d){var k=['#f7fcf5','#e5f5e0','#c7e9c0','#a1d99b','#74c476','#41ab5d','#238b45','#005a32'];return k[d];}
 else if(divcl==".div-3")
-  var z = d3.scale.linear().range(['#fff7bc','#fec44f','#d95f0e']);
+  var z = function(d){var k=['#fff5eb','#fee6ce','#fdd0a2','#fdae6b','#fd8d3c','#f16913','#d94801','#8c2d04'];return k[d];}
 else if(divcl==".div-4")
-  var z = d3.scale.linear().range(['#ece7f2','#a6bddb','#2b8cbe']);
+  var z = function(d){var k=['#f7fbff','#deebf7','#c6dbef','#9ecae1','#6baed6','#4292c6','#2171b5','#084594'];return k[d];}
 else {
   var z = d3.scale.category20();
 }
@@ -68,7 +68,10 @@ d3.csv("js/ecodata.csv", type, function(error, data) {
       .attr("class",function(d) { return d.x; })
       .attr("y", function(d) { return y(d.y + d.y0); })
       .attr("height", function(d) { return y(d.y0) - y(d.y + d.y0); })
-      .attr("width", (x.rangeBand() - 1)*0.8);
+      .attr("width", (x.rangeBand() - 1)*0.8)
+      .attr("stroke","black")
+      .attr("stroke-width","0.5px")
+      .attr("stroke-opacity","0.2");
 
   svg.append("g")
       .attr("class", "axis axis--x")
@@ -82,6 +85,8 @@ d3.csv("js/ecodata.csv", type, function(error, data) {
         .style("font-size", "16px")
         .style("fill", "white")
         .text(function(){
+            if(divcl==".div-1")
+              return "What's your priority?";
             if(divcl==".div-2")
               return "Pedestrian";
             if(divcl==".div-3")
