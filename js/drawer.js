@@ -20,7 +20,7 @@ else if(divcl==".div-3")
 else if(divcl==".div-4")
   var z = function(d){var k=['#f7fbff','#deebf7','#c6dbef','#9ecae1','#6baed6','#4292c6','#2171b5','#084594'];return k[d];}
 else {
-  var z = d3.scale.category20();
+  var z = function(d){var k=['#2ecc71' ,'#9b59b6','#e41a1c','#95a5a6','#6a3d9a','#E9D460','#b15928','#E7A49D'];return k[d];}
 }
 
 // else {

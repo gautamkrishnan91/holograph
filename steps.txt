@@ -1,0 +1,14 @@
+group enters the exhibit space
+they look at the poster and head to the comparison chamber
+in the comparison chamber each side of the holodisplay has an ipad and that represents a character
+One side of the holographic display is different from the characters and this side allows for deep exploration and changeable priorities
+Politician selects trial 5, Qa also selects trial 5
+Ped Selects Trial 1
+they compare different trials
+1st person can compare different order of preferences
+playing with trials , timeout/continue screen,
+please head to the implement table to implement the selected trial
+place the tokens on the table with refernce to the large image of selected trial
+Ambient display gives results in realtime about the performance of the trial being implemented along with others with no prioritization.
+Thank you
+  
